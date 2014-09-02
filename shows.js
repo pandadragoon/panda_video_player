@@ -19,7 +19,7 @@ function show(showtitle, season, episodes){
 var player = document.getElementById('videoPlayer');
 var mp4Vid = document.getElementById('mp4Source');
 
-//initiates new show objects
+//***initiates new show objects
 //show has three inputs: 
 //1)Name of the show which is the folder all seasons and episodes are stored in
 //2)Number of seasons for the show which are folders within show name
@@ -28,7 +28,7 @@ var Show1 = new show('Show1', 3, [1,2,3]);
 var Show2 = new show('Show2', 2, [4,2]);
 var Show3 = new show('Show3', 4,[2,4,3,2]);
 
-//creates an array of season options for the season selection box that can be selected by show
+//***creates an array of season options for the season selection box that can be selected by show
 var selectSeasons = new Array();
 	selectSeasons[0] = Show1.season;
 	selectSeasons[1] = Show2.season;
@@ -45,7 +45,7 @@ function createArray(num){
 	}
 	return myArray;
 }
-
+	//***
 function pickShow(show1, show2, show3){
 	//generates an array that represents which show, season, and episode to pick randomly
 	var theShow = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
@@ -71,7 +71,7 @@ function pickShow(show1, show2, show3){
 }
 
 function runShow() {
-	//puts together a filepath for randomly generated show
+	//***puts together a filepath for randomly generated show
 	//video must be stored as mp4
 	var file = pickShow(Show1.showtitle, Show2.showtitle, Show3.showtitle);
 	var fileOpen = file[0] + "/" + file[1] + "/" + file[2] + ".mp4";
@@ -89,7 +89,7 @@ function updateSeason(selectedshow){
 }
 
 function updateEpisode(selectedseason){
-	//updates and shows the episode selection option box and displays the showStart button
+	//***updates and shows the episode selection option box and displays the showStart button
 	 document.pick.episode.length = 0;
 	 document.getElementById('episode').style.display = 'block';
 	 document.getElementById('showStart').style.display = 'block';
