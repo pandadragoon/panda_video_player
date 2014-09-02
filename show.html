@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu|Megrim' rel='stylesheet' type='text/css'>
+	<link href="bootstrap.css" type="text/css" rel="stylesheet" />
+	<link href="show.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<h1><span class="panda">Panda</span>HTML5 Video Player</h1>
+				<video id="videoPlayer" class="center-block" controls="controls">
+			  	<source id="mp4Source" src="#" type="video/mp4">
+			 		Your browser does not support the video tag.
+			 	</video>
+			 	<button type="button" class="btn btn-danger center-block" onclick="runShow();">Random Video</button>
+		 	</div><!--end col -->
+		 	<div class="col-sm-4">
+			 	<h1>Choose Episode</h1>
+			 	<form name="pick" class="form-horizontal" role="form">
+			 		<p>Show:</p>
+			 		<select id="show" name="show" onclick="updateSeason(this.selectedIndex)"class="form-control">
+					  <option>Family Guy</option>
+					  <option>American Dad</option>
+					  <option>South Park</option>
+					</select>
+					
+					<div id="season">
+						<p>Season:</p>
+				 		<select name="season" onclick="updateEpisode(this.selectedIndex)" class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						</select>
+					</div>
+					
+					<div id="episode">
+						<p>Episode:</p>
+				 		<select name="episode" class="form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						</select>
+					</div>
+					
+					<button type="button" id="showStart" class="btn btn-danger center-block" onclick="runSelection(document.pick.show.selectedIndex, document.pick.season.selectedIndex, document.pick.episode.selectedIndex)">Start Episode</button>
+				</form>
+				<div class="checkbox">
+		    	<label>
+		      	<input type="checkbox" id="autoplay" onclick="autoPlay()"> Autoplay
+		    	</label>
+				</div>
+		 	</div><!--col div -->
+ 		</div><!--row div end  -->
+	</div><!-- container div -->
+
+	<script src="shows.js"></script>
+</body>
+
+</html>
