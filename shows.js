@@ -26,7 +26,7 @@ var mp4Vid = document.getElementById('mp4Source');
 //3)Array of number of episodes per season arranged in order
 var Show1 = new show('Show1', 3, [1,2,3]);
 var Show2 = new show('Show2', 2, [4,2]);
-var Show3 = new show('Show3', 4,[2,4,3,2]);
+var Show3 = new show('Show3', 4,[2,1,3,2]);
 
 //***creates an array of season options for the season selection box that can be selected by show
 var selectSeasons = new Array();
