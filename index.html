@@ -21,28 +21,20 @@
 			 	<form name="pick" class="form-horizontal" role="form">
 			 		<p>Show:</p>
 			 		<select id="show" name="show" onclick="updateSeason(this.selectedIndex)"class="form-control">
-					  <option>Show1</option>
-					  <option>Show2</option>
-					  <option>Show3</option>
 					</select>
-					
+
 					<div id="season">
 						<p>Season:</p>
 				 		<select name="season" onclick="updateEpisode(this.selectedIndex)" class="form-control">
-						  <option>1</option>
-						  <option>2</option>
 						</select>
 					</div>
-					
+
 					<div id="episode">
 						<p>Episode:</p>
 				 		<select name="episode" class="form-control">
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
 						</select>
 					</div>
-					
+
 					<button type="button" id="showStart" class="btn btn-danger center-block" onclick="runSelection(document.pick.show.selectedIndex, document.pick.season.selectedIndex, document.pick.episode.selectedIndex)">Start Episode</button>
 				</form>
 				<div class="checkbox">
@@ -54,7 +46,7 @@
  		</div><!--row div end  -->
 	</div><!-- container div -->
 
-	<script src="shows.js"></script>
+	<script src="show.js"></script>
 </body>
 
 </html>

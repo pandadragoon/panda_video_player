@@ -14,6 +14,8 @@ Season_Episode is the number of the episode in the season and the name of the .m
 
 example: VideoPlayer/TheSimpsons/2/5.mp4
 
-In the current iteration of the program, the code only supports 3 shows.  Further shows requires modification of the code in several areas.
 
-Areas marked *** in the code comments are required to change for more shows
+Configure Player
+====================
+
+Go to comments under Configuration in code to configure individual shows
